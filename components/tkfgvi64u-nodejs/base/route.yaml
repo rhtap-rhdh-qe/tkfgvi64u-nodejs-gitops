@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: tkfgvi64u-nodejs
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: tkfgvi64u-nodejs 
+  name: tkfgvi64u-nodejs
+spec:
+  port:
+    targetPort: 3001 
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: tkfgvi64u-nodejs
+    weight: 100 

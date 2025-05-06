@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: tkfgvi64u-nodejs
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: tkfgvi64u-nodejs 
+  name: tkfgvi64u-nodejs
+spec:
+  ports:
+  - port: 3001 
+    targetPort: 3001 
+  selector:
+    app.kubernetes.io/instance: tkfgvi64u-nodejs 
